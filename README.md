@@ -34,3 +34,5 @@ As Company able to change the view order of jobs
 As company search for candidate profile based on (experience , location , degree)
 
 As company able to shortlist the Candidate or bookmark the Candidate
+
+![mappings]https://raw.githubusercontent.com/AdityaBhatnagar2912/JobPortal-Project/main/Projectworkflow/workflowofproject.png
