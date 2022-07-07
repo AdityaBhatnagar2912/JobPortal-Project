@@ -32,7 +32,7 @@ public class Job {
 		this.deadline = deadline;
 		this.type = type;
 		this.postdate = postdate;
-		Degree = degree;
+		this.Degree = degree;
 		this.company = company;
 		this.user = user;
 	}

@@ -23,7 +23,7 @@ public class CompanyController {
 	@Autowired
 	CompanyRepo cr;
 	@Autowired
-	JobRepo jr;
+	JobRepo rj;
 
 	@GetMapping("/")
 	public List<Company> get() {
@@ -32,13 +32,18 @@ public class CompanyController {
 
 	@GetMapping("/sort/{order}")
 	public List<Job> getbyorder(@PathVariable String order) {
-		return jr.findAll(Sort.by(order));
+		return rj.findAll(Sort.by(order));
 	}
 
 	@PostMapping("/")
 	public List<Company> post(@RequestBody Company c) {
 		cr.save(c);
 		return cr.findAll();
+	}
+	@PutMapping("/editjob")
+	public List<Job> putJobs(@RequestBody Job e){
+		rj.save(e);
+		return rj.findAll();
 	}
 
 	@PutMapping("/")

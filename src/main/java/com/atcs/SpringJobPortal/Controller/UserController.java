@@ -2,7 +2,7 @@ package com.atcs.SpringJobPortal.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -72,8 +72,18 @@ public class UserController {
 			return null;}
 		
 	}	
-	
-	
+	@GetMapping("/degree/{Degree}")
+	public List<Job> getbydegree(@PathVariable String Degree){
+	      List<Job> list = jr.findAll();
+	      List<Job> list1 = new ArrayList<>();
+	      for(int i=0; i<list.size();i++) {
+	    	  if(list.get(i).getDegree().equals(Degree)){
+	    		  list1.add(list.get(i));
+	    	  }
+	      }
+		
+		return list1 ;
+	}
 	
 	
 	
